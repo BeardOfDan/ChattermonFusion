@@ -35,7 +35,7 @@ body {
 .stateContainer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 20px;
   min-height: 0;
 }
@@ -51,6 +51,18 @@ body {
 
 .logoContainer {
   height: 30%;
+}
+
+.chattermonLogo {
+  margin-top: 0;
+}
+
+.opponents {
+  margin-bottom: 0;
+}
+
+.record {
+  font-size: 0.75rem;
 }
 
 .messageInstance {
@@ -107,17 +119,18 @@ body {
   padding: 0 10px 20px;
   flex-grow: 1;
   overflow-y: scroll;
+  height: 98px; /* Prevents container from growing too high when loading screen is visible. */
 }
 
 .commandInstance {
-  font-family: 'Press Start 2P', cursive;  
+  font-family: 'Press Start 2P', cursive;
   font-size: 0.575rem;
   padding: 7px 0 0;
   width: 100%;
 }
 
 .commandInput {
-  font-family: 'Press Start 2P', cursive;  
+  font-family: 'Press Start 2P', cursive;
   flex-grow: 0.05;
   border-color: rgb(205, 169, 86);
   border-width: 5px;
@@ -133,7 +146,6 @@ body {
 .commandInput:focus {
   outline-width: 0;
 }
-
 
 .pokeView {
   display: grid;
@@ -327,14 +339,21 @@ body {
 
 .gameOver {
   font-family: 'Press Start 2P', cursive;
-  text-align: center; 
-  color: rgb(117, 114, 104); 
+  text-align: center;
+  color: rgb(117, 114, 104);
 }
 
 .winnerPokeView {
-  margin: 5em; 
+  margin: 5em;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
+}
+
+.battleField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
 
 .attackAnimation {
@@ -343,4 +362,77 @@ body {
 
 .attacked {
   opacity: 0.3
+}
+
+.teamContainer {
+  font-family: 'Press Start 2P', cursive;
+  display: block;
+  text-align: center;
+  height: 90%;
+}
+
+.teamCol {
+  width: 50%;
+  float: left;
+  height: 90%;
+}
+
+.listPokemon{
+  font-family: 'Press Start 2P', cursive;
+  display: inline-block;
+  justify-content: space-between;
+  background-color: rgb(249, 248, 218);
+  color: rgb(117, 114, 104);
+  height: 300px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 4px solid rgb(41, 64, 14);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.activeChoice {
+  font-family: 'Press Start 2P', cursive;
+  display: block;
+  justify-content: space-between;
+  background-color: rgb(249, 248, 218);
+  color: rgb(117, 114, 104);
+  height: 645px;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 4px solid rgb(41, 64, 14);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.moveList {
+  display: inline-block;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.moveItem {
+  text-align: left;
+}
+
+.teamList {
+  min-height: 148px;
+}
+
+.statsTable {
+  display: inline-block;
+  float: right;
+  text-align: left;
+  margin-top: 18px;
+  margin-right: 24px;
+  margin-left: 10px;
+}
+
+.activePicture {
+  display: inline-block;
+  float: left;
+  margin-left: 24px;
+  margin-right: 10px;
 }
