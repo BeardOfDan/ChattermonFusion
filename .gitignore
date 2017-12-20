@@ -22,6 +22,7 @@ coverage
 
 client/dist/bundle.js
 .DS_Store
+client/.DS_Store
 
 # Dependency directorys
 # Deployed apps should consider commenting these lines out:
